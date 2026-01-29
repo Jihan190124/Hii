@@ -7,28 +7,40 @@
 
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
 
-<style>
 *{box-sizing:border-box}
 
 body{
   margin:0;
   height:100vh;
-  background:#0b0b0d;
-  color:#eaeaea;
+  background:#fde7ef;
   font-family:'Inter',sans-serif;
   display:flex;
   align-items:center;
   justify-content:center;
   overflow:hidden;
+  color:#4a3b42;
+}
+
+/* floating hearts */
+.heart-float{
+  position:absolute;
+  font-size:14px;
+  opacity:.25;
+  animation: float 12s linear infinite;
+}
+
+@keyframes float{
+  from{transform:translateY(100vh)}
+  to{transform:translateY(-10vh)}
 }
 
 .card{
   width:92%;
   max-width:360px;
-  background:#111114;
-  border-radius:20px;
+  background:#fff1f6;
+  border-radius:22px;
   padding:28px 26px;
-  box-shadow:0 30px 80px rgba(0,0,0,.7);
+  box-shadow:0 25px 60px rgba(255,182,193,.45);
   animation: enter .9s ease;
   position:relative;
 }
@@ -39,14 +51,14 @@ body{
 }
 
 h1{
-  font-size:1.4rem;
+  font-size:1.5rem;
   font-weight:500;
-  margin:0 0 8px;
+  margin:0 0 6px;
 }
 
 .sub{
   font-size:.85rem;
-  color:#9a9a9a;
+  color:#9b6f7f;
   margin-bottom:18px;
 }
 
@@ -54,29 +66,35 @@ p{
   font-size:.95rem;
   line-height:1.7;
   margin:0 0 14px;
-  color:#dcdcdc;
 }
 
 hr{
   border:none;
   height:1px;
-  background:rgba(255,255,255,.08);
+  background:rgba(0,0,0,.06);
   margin:18px 0;
 }
 
-.footer{
-  font-size:.75rem;
-  color:#8a8a8a;
-  margin-top:10px;
+button{
+  background:#ffd1e1;
+  border:none;
+  padding:7px 14px;
+  border-radius:20px;
+  font-size:.8rem;
+  color:#6b4250;
+  cursor:pointer;
+  box-shadow:0 5px 12px rgba(255,182,193,.5);
 }
 
-/* fun cat */
+button:hover{
+  background:#ffc1d6;
+}
+
 .cat{
   position:absolute;
-  bottom:-20px;
-  right:20px;
-  font-size:1.8rem;
-  opacity:.8;
+  bottom:-18px;
+  right:18px;
+  font-size:1.9rem;
   animation: peek 6s infinite;
 }
 
@@ -86,19 +104,11 @@ hr{
   90%{transform:translateY(10px)}
 }
 
-/* button */
-button{
-  background:#1a1a1f;
-  border:none;
-  color:#aaa;
-  padding:6px 12px;
-  border-radius:20px;
+.footer{
   font-size:.75rem;
-  cursor:pointer;
-  margin-top:6px;
+  color:#9b6f7f;
+  margin-top:10px;
 }
-button:hover{color:#fff}
-</style>
 </head>
 
 <body>
