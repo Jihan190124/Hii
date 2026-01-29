@@ -4,111 +4,124 @@
 <meta charset="UTF-8">
 <title>Vidhi</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
-
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
 
-*{box-sizing:border-box}
+<style>
+  *{box-sizing:border-box}
 
-body{
-  margin:0;
-  height:100vh;
-  background:#fde7ef;
-  font-family:'Inter',sans-serif;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  overflow:hidden;
-  color:#4a3b42;
-}
+  body{
+    margin:0;
+    height:100vh;
+    background:#F7DB91; /* Your Mellow Yellow */
+    font-family:'Inter',sans-serif;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    overflow:hidden;
+    color:#4a3b42;
+  }
 
-/* floating hearts */
-.heart-float{
-  position:absolute;
-  font-size:14px;
-  opacity:.25;
-  animation: float 12s linear infinite;
-}
+  /* Floating elements */
+  .heart-float{
+    position:absolute;
+    font-size:18px;
+    opacity:.4;
+    bottom: -50px;
+    z-index: 0;
+    animation: float 10s linear infinite;
+  }
 
-@keyframes float{
-  from{transform:translateY(100vh)}
-  to{transform:translateY(-10vh)}
-}
+  @keyframes float{
+    from{transform:translateY(0) rotate(0deg)}
+    to{transform:translateY(-110vh) rotate(360deg)}
+  }
 
-.card{
-  width:92%;
-  max-width:360px;
-  background:#fff1f6;
-  border-radius:22px;
-  padding:28px 26px;
-  box-shadow:0 25px 60px rgba(255,182,193,.45);
-  animation: enter .9s ease;
-  position:relative;
-}
+  .card{
+    width:92%;
+    max-width:360px;
+    background:#FFFDCE; /* Your Creamy Off-White */
+    border-radius:22px;
+    padding:28px 26px;
+    box-shadow:0 25px 60px rgba(240, 117, 174, 0.25); /* Pink tint shadow */
+    animation: enter .9s ease;
+    position:relative;
+    z-index: 10;
+  }
 
-@keyframes enter{
-  from{opacity:0;transform:translateY(20px)}
-  to{opacity:1;transform:translateY(0)}
-}
+  @keyframes enter{
+    from{opacity:0;transform:translateY(20px)}
+    to{opacity:1;transform:translateY(0)}
+  }
 
-h1{
-  font-size:1.5rem;
-  font-weight:500;
-  margin:0 0 6px;
-}
+  h1{
+    font-size:1.8rem;
+    font-weight:600;
+    margin:0 0 6px;
+    color: #F075AE; /* Your Electric Pink */
+  }
 
-.sub{
-  font-size:.85rem;
-  color:#9b6f7f;
-  margin-bottom:18px;
-}
+  .sub{
+    font-size:.85rem;
+    color:#9b6f7f;
+    margin-bottom:18px;
+    font-weight: 500;
+  }
 
-p{
-  font-size:.95rem;
-  line-height:1.7;
-  margin:0 0 14px;
-}
+  p{
+    font-size:1rem;
+    line-height:1.6;
+    margin:0 0 14px;
+  }
 
-hr{
-  border:none;
-  height:1px;
-  background:rgba(0,0,0,.06);
-  margin:18px 0;
-}
+  hr{
+    border:none;
+    height:1px;
+    background:rgba(155, 194, 100, 0.4); /* Your Pistachio Green */
+    margin:18px 0;
+  }
 
-button{
-  background:#ffd1e1;
-  border:none;
-  padding:7px 14px;
-  border-radius:20px;
-  font-size:.8rem;
-  color:#6b4250;
-  cursor:pointer;
-  box-shadow:0 5px 12px rgba(255,182,193,.5);
-}
+  button{
+    background:#F075AE; /* Electric Pink */
+    border:none;
+    padding:10px 20px;
+    border-radius:20px;
+    font-size:.9rem;
+    color:white;
+    font-weight: 500;
+    cursor:pointer;
+    box-shadow:0 5px 15px rgba(240, 117, 174, 0.4);
+    transition: transform 0.2s, background 0.3s;
+  }
 
-button:hover{
-  background:#ffc1d6;
-}
+  button:active{
+    transform: scale(0.95);
+  }
 
-.cat{
-  position:absolute;
-  bottom:-18px;
-  right:18px;
-  font-size:1.9rem;
-  animation: peek 6s infinite;
-}
+  button:hover{
+    background:#9BC264; /* Transitions to Pistachio Green */
+  }
 
-@keyframes peek{
-  0%,70%,100%{transform:translateY(40px)}
-  80%{transform:translateY(0)}
-  90%{transform:translateY(10px)}
-}
+  .cat{
+    position:absolute;
+    bottom:-18px;
+    right:18px;
+    font-size:2.2rem;
+    animation: peek 6s infinite;
+  }
 
-.footer{
-  font-size:.75rem;
-  color:#9b6f7f;
-  margin-top:10px;
-}
+  @keyframes peek{
+    0%,70%,100%{transform:translateY(40px)}
+    80%{transform:translateY(0)}
+    90%{transform:translateY(10px)}
+  }
+
+  .footer{
+    font-size:.75rem;
+    color:#9b6f7f;
+    margin-top:15px;
+    line-height: 1.4;
+  }
+</style>
 </head>
 
 <body>
@@ -147,7 +160,6 @@ button:hover{
     made by your favourite brother <br>
     who noticed you’ve been tired
     <br>and made whole code on phone at 12:30😂😂
-    
   </div>
 
   <div class="cat">🐈‍⬛</div>
@@ -160,14 +172,34 @@ const lines = [
   "Yes, the job is annoying.",
   "You’re not lazy. You’re human.",
   "Go easy on yourself today.",
-  "This cat believes in you. Probably."
+  "This cat believes in you. Probably.",
+  "Take a deep breath. Right now.",
+  "One tiny step at a time."
+  "you are best didi ever!!! " 
 ];
 
 function change(){
-  document.getElementById("text").innerHTML =
-    lines[Math.floor(Math.random()*lines.length)];
+  const textElement = document.getElementById("text");
+  textElement.style.opacity = 0;
+  
+  setTimeout(() => {
+    textElement.innerHTML = lines[Math.floor(Math.random()*lines.length)];
+    textElement.style.transition = "opacity 0.3s";
+    textElement.style.opacity = 1;
+  }, 200);
+}
+
+// Generate the floating hearts that were missing!
+for (let i = 0; i < 15; i++) {
+  let heart = document.createElement('div');
+  heart.className = 'heart-float';
+  heart.innerHTML = '🌸'; // Using a flower to match the new colors!
+  heart.style.left = Math.random() * 100 + 'vw';
+  heart.style.animationDelay = Math.random() * 10 + 's';
+  heart.style.fontSize = (Math.random() * 10 + 15) + 'px';
+  document.body.appendChild(heart);
 }
 </script>
 
 </body>
-</html> 
+</html>
