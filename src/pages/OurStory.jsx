@@ -1,5 +1,4 @@
 import { Link } from 'react-router-dom';
-import Reveal from '../components/Reveal.jsx';
 import { LilyMark } from '../components/Logo.jsx';
 import usePageTitle from '../hooks/usePageTitle.js';
 import { IMAGES } from '../data/images.js';
@@ -18,12 +17,12 @@ export default function OurStory() {
         <div className="container-xl">
           <div className="row g-4 g-lg-5 align-items-start">
             <div className="col-12 col-lg-6">
-              <Reveal>
+              <div>
                 <img className="vel-story-img" src={IMAGES.ourStory.src} alt={IMAGES.ourStory.alt} width="1000" height="1300" loading="lazy" />
-              </Reveal>
+              </div>
             </div>
             <div className="col-12 col-lg-5 offset-lg-1">
-              <Reveal delay={0.1} className="vel-prose">
+              <div className="vel-prose">
                 <p className="vel-prose__lead">
                   VEL is a contemporary saree label inspired by the quiet elegance of the lily, a flower that needs no
                   embellishment to be remembered.
@@ -39,17 +38,17 @@ export default function OurStory() {
                 </p>
                 <p className="vel-note">Founder note and studio story: to be added by the VEL team.</p>
                 <Link to="/shop" className="vel-btn">Explore the collection</Link>
-              </Reveal>
+              </div>
             </div>
           </div>
         </div>
       </section>
 
       <section className="vel-statement vel-statement--pink" aria-label="Quote">
-        <Reveal className="container-xl">
+        <div className="container-xl">
           <LilyMark size={30} className="vel-statement__mark" />
           <p className="vel-statement__text">Some things never go out of bloom.</p>
-        </Reveal>
+        </div>
       </section>
 
       <section className="vel-section">

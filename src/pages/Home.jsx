@@ -1,18 +1,16 @@
 import { useEffect } from 'react';
-import { Link, useLocation } from 'react-router-dom';
-import HeroSection from '../components/HeroSection.jsx';
-import SectionHeading from '../components/SectionHeading.jsx';
-import ProductGrid from '../components/ProductGrid.jsx';
+import { useLocation } from 'react-router-dom';
+import FabricScene from '../components/FabricScene.jsx';
+import CatalogueView from '../components/CatalogueView.jsx';
 import EditorialStorySection from '../components/EditorialStorySection.jsx';
 import CollectionGrid from '../components/CollectionGrid.jsx';
+import SectionHeading from '../components/SectionHeading.jsx';
 import BrandStatement from '../components/BrandStatement.jsx';
 import TestimonialsSection from '../components/TestimonialsSection.jsx';
 import NewsletterSection from '../components/NewsletterSection.jsx';
 import usePageTitle from '../hooks/usePageTitle.js';
 import { products } from '../data/products.js';
 import { collections } from '../data/collections.js';
-
-const featured = products.filter((p) => p.featuredHome).slice(0, 6);
 
 export default function Home() {
   usePageTitle();
@@ -32,27 +30,25 @@ export default function Home() {
 
   return (
     <>
-      <HeroSection />
+      <FabricScene />
 
-      <section className="vel-section" aria-labelledby="featured-title">
-        <div className="container-xl">
-          <SectionHeading title="Considered in every detail." intro="A first look at the collection. Sample pieces, to be replaced with the VEL catalogue." />
-          <span id="featured-title" className="vel-sr">Featured sarees</span>
-          <ProductGrid products={featured} />
-          <p className="vel-section__cta"><Link to="/shop" className="vel-link">Shop All</Link></p>
+      {/* The scroll scene ends here: the full catalogue, with filters and sorting. */}
+      <section id="shop" className="vel-shop" aria-labelledby="shop-title">
+        <div className="container-xl vel-shop__head">
+          <h2 id="shop-title" className="vel-h2">Considered in every detail.</h2>
+          <p>Sample pieces from the demo catalogue. Filter by colour, fabric, occasion or price.</p>
         </div>
+        <CatalogueView products={products} />
       </section>
 
-      <EditorialStorySection />
-
-      <section className="vel-section vel-section--tint" aria-labelledby="collections-title">
+      <section className="vel-section vel-section--tint" aria-label="Collections">
         <div className="container-xl">
-          <SectionHeading title="Four ways to wear the bloom." intro="Editable collection groupings." />
-          <span id="collections-title" className="vel-sr">Collections</span>
+          <SectionHeading title="Four edits" intro="Editable collection groupings, each with its own mood." />
           <CollectionGrid collections={collections} />
         </div>
       </section>
 
+      <EditorialStorySection />
       <BrandStatement />
       <TestimonialsSection />
       <NewsletterSection />

@@ -1,5 +1,4 @@
 import { Link } from 'react-router-dom';
-import Reveal from './Reveal.jsx';
 import { IMAGES } from '../data/images.js';
 
 export default function EditorialStorySection() {
@@ -8,20 +7,20 @@ export default function EditorialStorySection() {
       <div className="container-xl">
         <div className="row g-4 g-lg-5 align-items-center">
           <div className="col-12 col-lg-7">
-            <Reveal className="vel-story__images">
+            <div className="vel-story__images">
               <img className="vel-story__large" src={IMAGES.storyLarge.src} alt={IMAGES.storyLarge.alt} width="1000" height="1300" loading="lazy" decoding="async" />
               <img className="vel-story__small" src={IMAGES.storySmall.src} alt={IMAGES.storySmall.alt} width="700" height="900" loading="lazy" decoding="async" />
-            </Reveal>
+            </div>
           </div>
           <div className="col-12 col-lg-5">
-            <Reveal delay={0.1}>
+            <div>
               <h2 id="story-title" className="vel-h2 vel-story__title">The quiet elegance of the lily.</h2>
               <p className="vel-story__text">
                 Inspired by the quiet elegance of the lily, VEL celebrates the beauty of simplicity, the richness of
                 Indian textiles, and the moments that make every drape meaningful.
               </p>
               <Link to="/our-story" className="vel-link">Discover Our Story</Link>
-            </Reveal>
+            </div>
           </div>
         </div>
       </div>

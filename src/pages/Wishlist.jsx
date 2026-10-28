@@ -27,7 +27,7 @@ export default function Wishlist() {
           )}
           <ProductGrid
             products={saved}
-            animate={false}
+           
             emptyTitle="Nothing saved yet"
             emptyText="Tap the heart on any saree to keep it here."
             emptyAction={<Link to="/shop" className="vel-btn">Explore the shop</Link>}

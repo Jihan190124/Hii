@@ -5,12 +5,6 @@ const base = import.meta.env.BASE_URL;
 export const img = (name) => `${base}images/${name}`;
 
 export const IMAGES = {
-  hero: {
-    src: img('hero.svg'),
-    alt: 'Campaign image placeholder: a draped saree in botanical green and champagne gold.',
-    // CSS object-position used to keep the subject in frame on narrow screens.
-    position: '68% center',
-  },
   storyLarge: {
     src: img('story-large.svg'),
     alt: 'Editorial placeholder: soft pink pleats with a champagne border.',

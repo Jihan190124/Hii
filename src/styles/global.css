@@ -56,7 +56,7 @@ code { font-size: 0.85em; background: var(--pink); padding: 0.1em 0.35em; }
 }
 
 :focus-visible { outline: 2px solid var(--green); outline-offset: 3px; }
-.on-dark :focus-visible, .vel-header--clear :focus-visible, .vel-hero :focus-visible { outline-color: var(--gold); }
+.on-dark :focus-visible, .vel-header--clear :focus-visible, .vel-scene :focus-visible { outline-color: var(--gold); }
 
 .vel-sr {
   position: absolute !important; width: 1px; height: 1px; margin: -1px; padding: 0;
@@ -73,10 +73,10 @@ code { font-size: 0.85em; background: var(--pink); padding: 0.1em 0.35em; }
 
 /* ---------- Type ---------- */
 .vel-h1, .vel-h2, .vel-h3 { font-family: var(--serif); font-weight: 400; line-height: 1.05; letter-spacing: -0.005em; }
-.vel-h1 { font-size: clamp(2.5rem, 7vw, 4.6rem); }
-.vel-h1--xl { font-size: clamp(3rem, 10vw, 7.5rem); line-height: 0.98; }
-.vel-h2 { font-size: clamp(2rem, 5vw, 3.4rem); }
-.vel-h3 { font-size: clamp(1.5rem, 3vw, 1.9rem); font-weight: 500; margin-bottom: 0.75rem; }
+.vel-h1 { font-size: clamp(2rem, 5.5vw, 3.6rem); }
+.vel-h1--xl { font-size: clamp(2.3rem, 7.5vw, 4.8rem); line-height: 1; }
+.vel-h2 { font-size: clamp(1.6rem, 4vw, 2.6rem); }
+.vel-h3 { font-size: clamp(1.3rem, 2.6vw, 1.6rem); font-weight: 500; margin-bottom: 0.75rem; }
 .vel-note { font-size: 0.8rem; color: var(--muted-ink); margin: 0.75rem 0 0; }
 .vel-tbc { font-style: italic; color: var(--muted-ink); }
 
@@ -139,16 +139,16 @@ textarea.vel-input { resize: vertical; }
 .vel-select svg { position: absolute; right: 0.75rem; pointer-events: none; }
 
 /* ---------- Layout helpers ---------- */
-.vel-section { padding-block: clamp(3.5rem, 8vw, 7rem); }
+.vel-section { padding-block: clamp(2.5rem, 6vw, 5rem); }
 .vel-section--flush { padding-top: clamp(1.5rem, 3vw, 2.5rem); }
 .vel-section--tint { background: var(--pink); }
 .vel-section__cta { text-align: center; margin: clamp(2rem, 4vw, 3rem) 0 0; }
 
-.vel-heading { margin-bottom: clamp(2rem, 4vw, 3.25rem); }
+.vel-heading { margin-bottom: clamp(1.5rem, 3vw, 2.5rem); }
 .vel-heading--center { text-align: center; }
 .vel-heading__intro { max-width: 34rem; margin: 1rem auto 0; color: var(--muted-ink); }
 .vel-heading--left .vel-heading__intro { margin-inline: 0; }
 
 .vel-prose { max-width: 34rem; font-size: 1.02rem; }
-.vel-prose__lead { font-family: var(--serif); font-size: clamp(1.5rem, 3vw, 2rem); line-height: 1.3; }
+.vel-prose__lead { font-family: var(--serif); font-size: clamp(1.3rem, 2.6vw, 1.7rem); line-height: 1.3; }
 .vel-prose p { margin-bottom: 1.25rem; }

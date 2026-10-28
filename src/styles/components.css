@@ -8,7 +8,7 @@
 .vel-logo { display: inline-flex; align-items: center; gap: 0.6rem; color: inherit; }
 .vel-logo__word { font-family: var(--serif); font-weight: 500; font-size: 1.7rem; letter-spacing: 0.4em; margin-right: -0.4em; line-height: 1; }
 .vel-logo--stacked { flex-direction: column; gap: 0.5rem; align-items: flex-start; }
-.vel-logo--stacked .vel-logo__word { font-size: 2.4rem; }
+.vel-logo--stacked .vel-logo__word { font-size: 1.9rem; }
 
 /* ---------- Header ---------- */
 .vel-header {
@@ -128,32 +128,6 @@
 .vel-check input:checked + .vel-check__box { background: var(--green); border-color: var(--green); color: var(--ivory); }
 .vel-check input:focus-visible + .vel-check__box { outline: 2px solid var(--green); outline-offset: 3px; }
 
-/* ---------- Hero ---------- */
-.vel-hero {
-  position: relative; margin-top: calc(var(--nav-h) * -1);
-  height: min(78svh, 620px); min-height: 520px; background: var(--green); color: var(--ivory); overflow: hidden;
-}
-@media (min-width: 992px) { .vel-hero { height: clamp(620px, 90svh, 860px); } }
-.vel-hero__img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: var(--hero-pos, 68% center); }
-.vel-hero__scrim {
-  position: absolute; inset: 0;
-  background:
-    linear-gradient(180deg, rgba(36, 61, 50, 0.55) 0%, rgba(36, 61, 50, 0) 28%),
-    linear-gradient(0deg, rgba(36, 61, 50, 0.88) 0%, rgba(36, 61, 50, 0.1) 62%);
-}
-@media (min-width: 768px) {
-  .vel-hero__scrim {
-    background:
-      linear-gradient(180deg, rgba(36, 61, 50, 0.5) 0%, rgba(36, 61, 50, 0) 26%),
-      linear-gradient(90deg, rgba(36, 61, 50, 0.82) 0%, rgba(36, 61, 50, 0.4) 50%, rgba(36, 61, 50, 0) 85%);
-  }
-}
-.vel-hero__content { position: relative; z-index: 1; height: 100%; display: flex; flex-direction: column; justify-content: flex-end; padding-bottom: clamp(2.5rem, 7vw, 5.5rem); }
-.vel-hero__title { font-family: var(--serif); font-weight: 300; font-size: clamp(3rem, 11vw, 7.2rem); line-height: 0.95; letter-spacing: -0.015em; max-width: 11ch; }
-.vel-hero__text { max-width: 26rem; margin: 1.25rem 0 1.75rem; font-size: 1.02rem; color: rgba(250, 247, 240, 0.92); }
-.vel-hero__actions { display: flex; flex-wrap: wrap; gap: 0.75rem; }
-@media (max-width: 420px) { .vel-hero__actions .vel-btn { flex: 1 1 100%; } }
-
 /* ---------- Product card ---------- */
 .vel-grid > li { min-width: 0; }
 .vel-card__media { position: relative; aspect-ratio: 3 / 4; overflow: hidden; background: var(--pink); }
@@ -194,8 +168,8 @@
 .vel-card__price { margin: 0.25rem 0 0; font-size: 0.92rem; font-weight: 500; }
 
 /* ---------- Catalogue toolbar ---------- */
-.vel-pagehead { padding-block: clamp(2.5rem, 6vw, 5rem) clamp(1.25rem, 3vw, 2rem); }
-.vel-pagehead--story { padding-block: clamp(3.5rem, 9vw, 8rem) clamp(2rem, 4vw, 3rem); }
+.vel-pagehead { padding-block: clamp(1.75rem, 4vw, 3.5rem) clamp(1rem, 2.5vw, 1.75rem); }
+.vel-pagehead--story { padding-block: clamp(2.5rem, 6vw, 5rem) clamp(1.5rem, 3vw, 2.5rem); }
 .vel-pagehead__intro { max-width: 34rem; margin: 1rem 0 0; color: var(--muted-ink); }
 .vel-subnav { display: flex; flex-wrap: wrap; gap: 0.25rem 1.75rem; margin-top: 1.5rem; }
 .vel-subnav a { padding: 0.5rem 0; font-size: 0.9rem; border-bottom: 1px solid transparent; }
@@ -213,7 +187,7 @@
 @media (hover: hover) { .vel-tile:hover img { transform: scale(1.04); } }
 .vel-tile::after { content: ''; position: absolute; inset: 0; background: linear-gradient(0deg, rgba(36, 61, 50, 0.82) 0%, rgba(36, 61, 50, 0) 60%); }
 .vel-tile__body { position: absolute; z-index: 1; left: 0; right: 0; bottom: 0; padding: 1.25rem; display: grid; gap: 0.3rem; }
-.vel-tile__title { font-family: var(--serif); font-size: clamp(1.7rem, 3.4vw, 2.1rem); line-height: 1.05; }
+.vel-tile__title { font-family: var(--serif); font-size: clamp(1.4rem, 3vw, 1.8rem); line-height: 1.05; }
 .vel-tile__desc { font-size: 0.85rem; color: rgba(250, 247, 240, 0.9); }
 .vel-tile__cta { justify-self: start; margin-top: 0.5rem; font-size: 0.85rem; letter-spacing: 0.04em; border-bottom: 1px solid rgba(250, 247, 240, 0.6); padding-bottom: 2px; }
 
@@ -222,26 +196,26 @@
 .vel-story__large { width: 78%; aspect-ratio: 4 / 5; object-fit: cover; background: var(--pink); }
 .vel-story__small { position: absolute; right: 0; bottom: 0; width: 44%; aspect-ratio: 7 / 9; object-fit: cover; border: 8px solid var(--ivory); background: var(--pink); }
 @media (min-width: 992px) { .vel-story__images { padding-bottom: 18%; } .vel-story__small { border-width: 12px; } }
-.vel-story__title { margin-bottom: 1.5rem; max-width: 12ch; }
-.vel-story__text { font-family: var(--serif); font-size: clamp(1.3rem, 2.6vw, 1.65rem); line-height: 1.4; margin-bottom: 1.75rem; }
+.vel-story__title { margin-bottom: 1rem; max-width: 16ch; }
+.vel-story__text { font-family: var(--serif); font-size: clamp(1.1rem, 2.2vw, 1.4rem); line-height: 1.45; margin-bottom: 1.5rem; }
 .vel-story-img { width: 100%; aspect-ratio: 4 / 5; object-fit: cover; background: var(--pink); }
 
 /* ---------- Brand statement ---------- */
-.vel-statement { padding-block: clamp(5rem, 14vw, 11rem); text-align: center; background: var(--green); color: var(--ivory); }
+.vel-statement { padding-block: clamp(3rem, 8vw, 6rem); text-align: center; background: var(--green); color: var(--ivory); }
 .vel-statement--pink { background: var(--pink); color: var(--green); }
-.vel-statement__mark { margin: 0 auto 1.75rem; color: var(--gold); }
-.vel-statement__text { font-family: var(--serif); font-weight: 300; font-size: clamp(2.2rem, 7vw, 5rem); line-height: 1.05; margin: 0 auto; max-width: 16ch; }
+.vel-statement__mark { margin: 0 auto 1.25rem; color: var(--gold); }
+.vel-statement__text { font-family: var(--serif); font-weight: 300; font-size: clamp(1.6rem, 4.6vw, 3.2rem); line-height: 1.1; margin: 0 auto; max-width: 20ch; }
 
 /* ---------- Testimonials ---------- */
 .vel-testimonials { background: var(--white); }
 .vel-quote { height: 100%; padding: 1.75rem; border: 1px solid var(--line); background: var(--ivory); }
 .vel-quote__flag { display: inline-block; margin-bottom: 1rem; padding: 0.15rem 0.6rem; background: var(--pink); font-size: 0.75rem; }
-.vel-quote blockquote { font-family: var(--serif); font-size: 1.4rem; line-height: 1.35; margin-bottom: 1.25rem; }
+.vel-quote blockquote { font-family: var(--serif); font-size: 1.2rem; line-height: 1.35; margin-bottom: 1.25rem; }
 .vel-quote figcaption { font-size: 0.85rem; color: var(--muted-ink); }
 .vel-testimonials li { height: 100%; }
 
 /* ---------- Newsletter ---------- */
-.vel-newsletter { padding-block: clamp(4rem, 9vw, 7rem); background: var(--pink); text-align: center; scroll-margin-top: var(--nav-h); }
+.vel-newsletter { padding-block: clamp(2.75rem, 6vw, 4.5rem); background: var(--pink); text-align: center; scroll-margin-top: var(--nav-h); }
 .vel-newsletter__inner { max-width: 36rem; margin-inline: auto; }
 .vel-newsletter__text { margin: 1rem 0 1.75rem; color: var(--muted-ink); }
 .vel-newsletter__form { display: flex; flex-direction: column; gap: 0.6rem; }
@@ -251,7 +225,7 @@
 .vel-newsletter__msg--success { color: var(--green); font-weight: 500; }
 
 /* ---------- Footer ---------- */
-.vel-footer { background: var(--green); color: rgba(250, 247, 240, 0.86); padding-top: clamp(3rem, 7vw, 5.5rem); }
+.vel-footer { background: var(--green); color: rgba(250, 247, 240, 0.86); padding-top: clamp(2.25rem, 5vw, 3.75rem); }
 .vel-footer__logo { display: inline-block; color: var(--ivory); }
 .vel-footer__about { max-width: 22rem; margin-top: 1.25rem; font-size: 0.9rem; }
 .vel-footer__h { font-family: var(--serif); font-weight: 400; font-size: 1.35rem; color: var(--ivory); margin-bottom: 0.9rem; }
@@ -289,7 +263,7 @@
 @media (max-width: 767px) { .vel-pdp { padding-bottom: 5.5rem; } }
 .vel-pdp__info { position: static; }
 @media (min-width: 992px) { .vel-pdp__info { position: sticky; top: calc(var(--nav-h) + 1.5rem); } }
-.vel-pdp__name { font-size: clamp(2.2rem, 5vw, 3.2rem); }
+.vel-pdp__name { font-size: clamp(1.8rem, 4vw, 2.6rem); }
 .vel-pdp__price { font-size: 1.3rem; font-weight: 500; margin: 0.9rem 0 0.15rem; }
 .vel-pdp__tax { font-size: 0.8rem; color: var(--muted-ink); margin-bottom: 1.25rem; }
 .vel-pdp__desc { max-width: 30rem; margin-bottom: 1.5rem; }
@@ -300,7 +274,7 @@
 .vel-pdp__buy { display: grid; grid-template-columns: auto 1fr; gap: 0.75rem; align-items: stretch; margin-bottom: 0.75rem; }
 .vel-pdp__buy .vel-btn { width: 100%; }
 .vel-pdp__secondary { display: grid; gap: 0.5rem; margin-bottom: 2rem; }
-.vel-related { margin-top: clamp(4rem, 9vw, 7rem); }
+.vel-related { margin-top: clamp(2.5rem, 6vw, 4.5rem); }
 .vel-buybar {
   position: fixed; left: 0; right: 0; bottom: 0; z-index: 90; display: flex; align-items: center; gap: 1rem;
   padding: 0.75rem var(--pad) calc(0.75rem + env(safe-area-inset-bottom));
@@ -347,7 +321,7 @@
 /* ---------- Empty state, toast, contact ---------- */
 .vel-empty { display: grid; justify-items: center; text-align: center; padding: clamp(3rem, 8vw, 6rem) 1rem; }
 .vel-empty__mark { color: var(--gold); margin-bottom: 1.25rem; }
-.vel-empty__title { font-family: var(--serif); font-weight: 400; font-size: clamp(1.8rem, 4vw, 2.4rem); line-height: 1.1; }
+.vel-empty__title { font-family: var(--serif); font-weight: 400; font-size: clamp(1.5rem, 3.4vw, 2rem); line-height: 1.1; }
 .vel-empty__text { margin: 0.75rem 0 0; max-width: 28rem; color: var(--muted-ink); }
 .vel-empty__actions { display: flex; flex-wrap: wrap; justify-content: center; gap: 0.75rem; margin-top: 1.75rem; }
 .vel-drawer__empty .vel-empty__title { font-size: 1.9rem; }
@@ -370,3 +344,33 @@
 .vel-contact svg { margin-top: 0.25rem; flex: none; }
 .vel-values p { color: var(--muted-ink); max-width: 22rem; }
 .vel-values .vel-h3 { margin-bottom: 0.5rem; }
+
+/* ---------- Home: scroll-driven fabric scene ---------- */
+.vel-scene { position: relative; height: 300svh; margin-top: calc(var(--nav-h) * -1); color: var(--ivory); }
+@media (min-width: 992px) { .vel-scene { height: 340svh; } }
+.vel-scene--static { height: auto; min-height: 70svh; display: flex; align-items: flex-end; padding: calc(var(--nav-h) + 2rem) var(--pad) 3rem; }
+.vel-scene__stage { position: sticky; top: 0; height: 100svh; overflow: hidden; }
+.vel-scene__cloth { position: absolute; inset: 0; width: 100%; height: 100%; }
+.vel-scene__shade {
+  position: absolute; inset: 0; pointer-events: none;
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0) 55%), linear-gradient(180deg, rgba(0, 0, 0, 0.28) 0%, rgba(0, 0, 0, 0) 22%);
+}
+.vel-scene__chapters { position: absolute; inset: 0; }
+.vel-scene__chapter { position: absolute; left: var(--pad); right: calc(var(--pad) + 28px); bottom: calc(clamp(4rem, 13svh, 6.5rem) + env(safe-area-inset-bottom)); max-width: 30rem; }
+.vel-scene__chapter--static { position: static; }
+@media (min-width: 992px) { .vel-scene__chapter { left: max(var(--pad), calc((100vw - 1320px) / 2 + var(--pad))); max-width: 36rem; } }
+.vel-scene__title { font-family: var(--serif); font-weight: 300; font-size: clamp(2rem, 6.5vw, 4.2rem); line-height: 1; letter-spacing: -0.01em; }
+.vel-scene__text { margin: 0.9rem 0 1.4rem; max-width: 24rem; font-size: 0.95rem; color: rgba(250, 247, 240, 0.9); }
+.vel-scene__actions { display: flex; flex-wrap: wrap; gap: 0.6rem; }
+.vel-scene__rail { position: absolute; right: var(--pad); top: 50%; transform: translateY(-50%); display: grid; gap: 6px; }
+.vel-scene__tick { display: block; width: 2px; height: 34px; background: rgba(250, 247, 240, 0.28); overflow: hidden; }
+.vel-scene__tick > span { display: block; width: 100%; height: 100%; background: var(--gold); transform-origin: top; }
+.vel-scene__skip {
+  position: absolute; left: var(--pad); bottom: calc(1rem + env(safe-area-inset-bottom)); min-height: 44px; padding: 0 0.25rem;
+  background: none; border: 0; color: rgba(250, 247, 240, 0.85); font-size: 0.82rem; text-decoration: underline; text-underline-offset: 4px;
+}
+.vel-scene__skip:hover { color: var(--ivory); }
+.vel-scene :focus-visible { outline-color: var(--gold); }
+.vel-shop { padding-top: clamp(2.25rem, 5vw, 4rem); scroll-margin-top: 0; }
+.vel-shop__head { margin-bottom: 1.25rem; }
+.vel-shop__head p { margin: 0.6rem 0 0; max-width: 32rem; color: var(--muted-ink); }

@@ -58,16 +58,6 @@ function saree({ base, seed, detail = false, w = 900, h = 1200 }) {
   return wrap(w, h, baseDefs(base), body);
 }
 
-function hero() {
-  const w = 1600, h = 1000, base = '#243D32';
-  let body = `<rect width="${w}" height="${h}" fill="url(#g)"/>` + pleats(w, h, 3.2, 18);
-  body += `<path d="M900 ${h} C1000 640 1180 520 1330 330 C1420 220 1500 120 1600 40 L1600 ${h}Z" fill="#C5A46D" fill-opacity=".16"/>`;
-  body += `<path d="M1010 ${h} C1100 700 1250 600 1380 440 C1450 350 1520 260 1600 190" fill="none" stroke="${GOLD}" stroke-opacity=".7" stroke-width="2"/>`;
-  body += lily(1180, 760, 11, GOLD, 0.34);
-  body += `<rect width="${w}" height="${h}" fill="url(#v)"/>`;
-  return wrap(w, h, baseDefs(base), body);
-}
-
 const write = (name, svg) => writeFileSync(new URL(name, OUT), svg);
 
 // Product artwork: [id, base colour, seed]
@@ -81,7 +71,6 @@ items.forEach(([id, base, seed]) => {
   write(`${id}-b.svg`, saree({ base, seed: seed + 20, detail: true }));
 });
 
-write('hero.svg', hero());
 write('story-large.svg', saree({ base: '#E9D2D3', seed: 31, w: 1000, h: 1300 }));
 write('story-small.svg', saree({ base: '#A9B8A2', seed: 33, detail: true, w: 700, h: 900 }));
 write('story-detail.svg', saree({ base: '#EFE6D3', seed: 35, detail: true, w: 1000, h: 1300 }));
